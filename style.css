@@ -1,3 +1,10 @@
 body {
   text-align: center;
 }
+
+.watch {
+  border: 5px solid gray;
+  padding: 2px;
+  max-width: 140px;
+  margin: 2px auto;
+}
