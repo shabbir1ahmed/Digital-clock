@@ -22,15 +22,22 @@
 
 const time = () => {
   const date = new Date();
-  const hour = date.getHours();
-  const minute = date.getHours();
+  let hour = date.getHours();
+  const minute = date.getMinutes();
   const second = date.getSeconds();
-  const hours = hour > 12 ? `${hour - 12}` : hour;
+  const amPm = hour > 12 ? "pm" : "am";
+  // const hours = hour > 12 ? `${hour - 12}` : hour;
+  if (hour === 0) {
+    hour = 12;
+  } else if (hour < 10) {
+    hour = "0" + hour;
+  } else if (hour > 12) {
+    hour = hour - 12;
+  }
   const minutes = minute < 10 ? "0" + minute : minute;
   const seconds = second < 10 ? "0" + second : second;
 
-  const amPm = hour > 12 ? "pm" : "am";
-  const watch = `${hours} : ${minutes} : ${seconds}`;
+  const watch = `${hour} : ${minutes} : ${seconds}`;
   document.getElementById("watch").innerHTML = watch;
   document.getElementById("time-formate").innerText = amPm;
 };
