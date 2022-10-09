@@ -8,3 +8,12 @@ body {
   max-width: 140px;
   margin: 2px auto;
 }
+div {
+  border: 10px solid rgb(238, 27, 105);
+  padding: 10px;
+  font-size: 22px;
+  max-width: 140px;
+  margin: 2px auto;
+  background-color: rgb(54, 52, 52);
+  color: white;
+}
