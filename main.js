@@ -25,11 +25,11 @@ const time = () => {
   const hour = date.getHours();
   const minute = date.getHours();
   const second = date.getSeconds();
-  const hours = hour > 12 ? hour - 12 : hour;
+  const hours = hour > 12 ? `${hour - 12}` : hour;
   const minutes = minute < 10 ? "0" + minute : minute;
   const seconds = second < 10 ? "0" + second : second;
 
-  const amPm = hours < 12 ? "am" : "pm";
+  const amPm = hour > 12 ? "pm" : "am";
   const watch = `${hours} : ${minutes} : ${seconds}`;
   document.getElementById("watch").innerHTML = watch;
   document.getElementById("time-formate").innerText = amPm;
